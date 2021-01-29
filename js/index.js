@@ -104,7 +104,7 @@ lightGallery(document.getElementById("aniimated-thumbnials"), {
 // });
 
 // popup jQuery
-$(".gallery-container ul li a.btn-2").on("click", function () {
+$(".gallery-container ul li .btn-2").on("click", function () {
   $(".room .pop-up").fadeIn();
   var galleryThumbs = new Swiper(".gallery-thumbs", {
     slidesPerView: 4,
