@@ -94,10 +94,10 @@
                 <ul class="header-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#room">Room</a></li>
-                    <li><a href="#">Destination</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#destination">Destination</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <ul class="header-search-cart">
                     <li>
@@ -110,11 +110,35 @@
                             <span class="fa fa-cart-plus" aria-hidden="true"></span>
                         </button>
                     </li>
+                    <li id="mobile">
+                        <button class="btn-mobile">
+                            <span class="fa fa-bars" aria-hidden="true"></span>
+                        </button>
+                    </li>
                 </ul>
 
             </div>
         </div>
+        <!-- Menu mobile -->
+        <div class="menu-mobile">
+            <div class="inside">
+                <div class="mobile-block">
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#room">Room</a></li>
+                            <li><a href="#destination">Destination</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#service">Service</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </div>
+        </div>
     </header>
+
     <!-- END BEGIN HEADER -->
 
     <!-- BEGIN SLIDES -->
@@ -191,7 +215,7 @@
     <!-- END SLIDES -->
 
     <!-- BEGIN ABOUT -->
-    <section class="about section-padding">
+    <section class="about section-padding" id="about">
         <div class="container">
             <div class="about-block">
                 <div class="about-img">
@@ -214,7 +238,7 @@
     <!-- END ABOUT -->
 
     <!-- BEGIN DESTINATION -->
-    <section class="destination section-padding">
+    <section class="destination section-padding" id="destination">
         <div class="container">
             <div class="title">
                 <span>Populer Destination</span>
@@ -354,8 +378,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="close"></div>
+                                
                             </div>
+                            <div class="close"></div>
                         </div>
                     </div>
                     <ul>
@@ -426,7 +451,7 @@
     <!-- END ROOM -->
 
     <!-- BEGIN FEATURED -->
-    <section class="featured">
+    <section class="featured" id="service">
         <div id="aniimated-thumbnials">
             <a href="./img/1.jpg">
                 <img src="./img/1.jpg" alt="">
@@ -552,6 +577,42 @@
         </div>
     </section>
     <!-- END REVIEW -->
+
+    <!-- BEGIN CONTACT -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="title">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="validate-input">
+                            <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name*">
+                        </div>
+                        <div class="validate-input">
+                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone">
+                        </div>
+                        <div class="validate-input">
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="Email Address*">
+                        </div>
+                        <div class="validate-input">
+                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Subjects">
+                        </div>
+                        <div>
+                            <textarea class="form-control" name="messenge" id="messenge"
+                                placeholder="Messenge"></textarea>
+                        </div>
+                        <div class="submit-btn-wrapper">
+                            <button type="submit" class="btn btn-2">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTACT -->
 
     <!-- FOOTER -->
     <footer>

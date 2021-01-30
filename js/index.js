@@ -51,22 +51,22 @@ $(function () {
 
 // Code swiper destination
 var swiperDestination = new Swiper(".swiper-desti", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   loop: true,
   autoplay: {
     delay: 3000,
   },
   speed: 2000,
   breakpoints: {
-    300: {
-      slidesPerView: 1,
+    575: {
+      slidesPerView: 2,
       spaceBetween: 10,
     },
-    768: {
-      slidesPerView: 2,
+    991:{
+      slidesPerView: 3,
       spaceBetween: 20,
     },
-    1024: {
+    1170: {
       slidesPerView: 4,
       spaceBetween: 30,
     },
@@ -126,6 +126,15 @@ $(".pop-up .close").on("click", function () {
   return false;
 });
 //end
+//menu moblie
+$(".header-bottom ul.header-search-cart li .btn-mobile").on("click", function () {
+  $(".menu-mobile").fadeIn();
+  return false;
+});
+$(".menu-mobile .close").on("click", function () {
+  $(".menu-mobile").fadeOut();
+  return false;
+});
 
 //Code Swiper review
 var swiperReview = new Swiper(".swiper-review", {
