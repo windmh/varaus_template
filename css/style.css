@@ -659,7 +659,7 @@ h6 {
 }
 
 .pop-up .pop-up--block {
-  background: #283A5E;
+  background: #283a5e;
   width: 800px;
   height: 500px;
   z-index: 2;
@@ -991,6 +991,40 @@ footer {
 }
 /* End Contact */
 
+/* Back to top */
+.back-to-top {
+  background-color: rgba(0, 214, 144, 0.7);
+  border: 2px solid #00d690;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  display: inline-block;
+  position: fixed;
+  z-index: 999;
+  right: 15px;
+  bottom: 15px;
+  transition: all 0.2s;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: rgba(0,214,144);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top span {
+  font-size: 25px;
+  color: #fff;
+}
+
 /* Reponsive */
 
 /* Large devices (desktops, less than 1200px) */
@@ -1090,7 +1124,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pop-up .pop-up--block{
+  .pop-up .pop-up--block {
     width: 600px;
     height: 400px;
   }
@@ -1136,7 +1170,7 @@ footer {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .pop-up .pop-up--block{
+  .pop-up .pop-up--block {
     width: 400px;
     height: 300px;
   }
