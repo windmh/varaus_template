@@ -2,9 +2,9 @@
 var swiperSlides = new Swiper(".swiper-slides", {
   spaceBetween: 30,
   effect: "fade",
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   navigation: {
     nextEl: ".button-slide-next",
     prevEl: ".button-slide-prev",
@@ -197,4 +197,36 @@ $(window).scroll(function () {
 btn.on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, "300");
+});
+
+$(document).ready(function () {
+  $(".button-slide-next").on("click", function () {
+    $(".slides-content h2").removeClass("animate__slideInLeft");
+    $(".slides-content p").removeClass("animate__slideInLeft animate__slow");
+    $(".slides-content button").removeClass(
+      "animate__slideInLeft animate__slower"
+    );
+    setTimeout(function () {
+      $(".slides-content h2").addClass("animate__slideInLeft");
+      $(".slides-content p").addClass("animate__slideInLeft animate__slow");
+      $(".slides-content button").addClass(
+        "animate__slideInLeft animate__slower"
+      );
+    });
+  });
+
+  $(".button-slide-prev").on("click", function () {
+    $(".slides-content h2").removeClass("animate__slideInLeft");
+    $(".slides-content p").removeClass("animate__slideInLeft animate__slow");
+    $(".slides-content button").removeClass(
+      "animate__slideInLeft animate__slower"
+    );
+    setTimeout(function () {
+      $(".slides-content h2").addClass("animate__slideInLeft");
+      $(".slides-content p").addClass("animate__slideInLeft animate__slow");
+      $(".slides-content button").addClass(
+        "animate__slideInLeft animate__slower"
+      );
+    });
+  });
 });
