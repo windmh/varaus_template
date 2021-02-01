@@ -366,10 +366,15 @@ h6 {
   left: 50%;
   transform: translateX(-50%);
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   border-radius: 10px;
   overflow: hidden;
+}
+
+.destination-content .info{
+  display: flex;
+  justify-content: space-between;
 }
 
 .content-left h5 {
@@ -388,6 +393,14 @@ h6 {
   color: #02cb89;
   font-size: 25px;
   margin-bottom: 10px;
+}
+
+.btn-see-more{
+  padding: 3px 8px;
+  color: #fff;
+  background: #00d690;
+  font-size: 14px;
+  border-radius: 10px;
 }
 
 /* End Destination */
@@ -679,6 +692,8 @@ h6 {
   height: 500px;
   z-index: 2;
   position: relative;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 10px 10px #999999;
 }
 
 .popup-inside {
@@ -1308,7 +1323,7 @@ footer {
 
   .pop-up .pop-up--block {
     width: 300px;
-    height: 200px;
+    height: 400px;
   }
 
   .featured-content h4 {

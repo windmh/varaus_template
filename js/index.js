@@ -53,16 +53,16 @@ $(function () {
 var swiperDestination = new Swiper(".swiper-desti", {
   slidesPerView: 1,
   loop: true,
-  autoplay: {
-    delay: 3000,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  // },
   speed: 2000,
   breakpoints: {
     575: {
       slidesPerView: 2,
       spaceBetween: 10,
     },
-    991:{
+    991: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
@@ -105,7 +105,7 @@ lightGallery(document.getElementById("aniimated-thumbnials"), {
 
 // popup jQuery
 $(".gallery-container ul li .btn-2").on("click", function () {
-  $(".room .pop-up").fadeIn();
+  $(".pop-up").fadeIn();
   var galleryThumbs = new Swiper(".gallery-thumbs", {
     slidesPerView: 4,
     spaceBetween: 5,
@@ -121,16 +121,38 @@ $(".gallery-container ul li .btn-2").on("click", function () {
   });
   return false;
 });
+
+$(".btn-see-more").on("click", function () {
+  $(".pop-up").fadeIn();
+  var galleryThumbs = new Swiper(".gallery-thumbs", {
+    slidesPerView: 4,
+    spaceBetween: 5,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper(".gallery-top", {
+    loop: true,
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
+  return false;
+});
+
 $(".pop-up .close").on("click", function () {
-  $(".room .pop-up").fadeOut();
+  $(".pop-up").fadeOut();
   return false;
 });
 //end
 //menu moblie
-$(".header-bottom ul.header-search-cart li .btn-mobile").on("click", function () {
-  $(".menu-mobile").fadeIn();
-  return false;
-});
+$(".header-bottom ul.header-search-cart li .btn-mobile").on(
+  "click",
+  function () {
+    $(".menu-mobile").fadeIn();
+    return false;
+  }
+);
 $(".menu-mobile .close").on("click", function () {
   $(".menu-mobile").fadeOut();
   return false;
@@ -161,19 +183,18 @@ var swiperReview = new Swiper(".swiper-review", {
 });
 //end
 
-
 // back to top
-let btn = $('.back-to-top');
+let btn = $(".back-to-top");
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
+    btn.addClass("show");
   } else {
-    btn.removeClass('show');
+    btn.removeClass("show");
   }
 });
 
-btn.on('click', function(e) {
+btn.on("click", function (e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  $("html, body").animate({ scrollTop: 0 }, "300");
 });
