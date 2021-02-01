@@ -1276,6 +1276,7 @@ footer {
 
   .button-slide-next, .button-slide-prev{
     background: none;
+    outline: none;
   }
 
   .section-padding {
