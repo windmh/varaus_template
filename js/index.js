@@ -212,7 +212,7 @@ $(document).ready(function () {
       $(".slides-content button").addClass(
         "animate__slideInLeft animate__slower"
       );
-    });
+    }, 100);
   });
 
   $(".button-slide-prev").on("click", function () {
@@ -227,6 +227,6 @@ $(document).ready(function () {
       $(".slides-content button").addClass(
         "animate__slideInLeft animate__slower"
       );
-    });
+    }, 100);
   });
 });
