@@ -1194,16 +1194,6 @@ footer {
     height: 450px;
   }
 
-
-  .slides-content h2 {
-    margin-bottom: 20px;
-    line-height: 1;
-  }
-
-  .slides-content .btns {
-    margin-top: 20px;
-  }
-
   .featured #aniimated-thumbnials {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1261,11 +1251,11 @@ footer {
   }
 
   .slides-content p {
-    font-size: 10px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .slides-content .btn-2 {
-    margin-top: 5px;
     padding: 7px 14px;
   }
 
