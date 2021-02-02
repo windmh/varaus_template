@@ -29,6 +29,25 @@ var swiperSlides = new Swiper(".swiper-slides", {
 //   });
 // })
 
+setTimeout(function () {
+  $(".gallery-container ul").isotope({
+    itemSelector: "li",
+  });
+
+  // code cho phan nut
+  $(".gallery-filters ul li a").click(function (e) {
+    e.preventDefault();
+    var list = $(this).data("id");
+
+    if (list === "Classic") {
+      $(".gallery-container ul").isotope({ filter: "*" });
+    } else {
+      list = "." + list;
+      $(".gallery-container ul").isotope({ filter: list });
+    }
+  });
+}, 100);
+
 $(function () {
   $(".gallery-container ul").isotope({
     itemSelector: "li",
